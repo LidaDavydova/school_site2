@@ -1,10 +1,26 @@
-{% extends 'take.html' %}
-
-
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        
+        <title>{% block title %}Главная страница{% endblock %}</title>
+        
+        <link rel="stylesheet" href="{% static 'base.css' %}" type="text/css">
+        <meta name="description" content="Panorama — A-Frame">
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    </head>
+<body>
 {% block body %}
-<div class="sketchfab-embed-wrapper"> <iframe title="Soda Bottle" frameborder="0"
-        allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" allow="autoplay; fullscreen; xr-spatial-tracking"
-        xr-spatial-tracking execution-while-out-of-viewport execution-while-not-rendered web-share width="700" height="500"
-        src="https://sketchfab.com/models/4bf14705154b443f9e1c845d133bf5ec/embed?autostart=1&ui_hint=0">
-        </iframe> </div>
+<a-scene id="img_360">
+      <a-sky src="../static/d.jpg" rotation="0 -130 0"></a-sky>
+    </a-scene>
+    
+    <div class="content_geo">
+        <div>
+        </div>
+    </div>
 {% endblock %}
+</body>
+</html>
+
